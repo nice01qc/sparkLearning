@@ -20,6 +20,7 @@ object SparkSessionTemplate {
 
     val myRange = spark.range(10000).toDF("number")
 
+    // 文件保存路径
     myRange.rdd.saveAsTextFile("/home/work/data/test/spark_dir")
 
     println("成功。。。。")
